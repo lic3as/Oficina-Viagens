@@ -4,15 +4,28 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #e5e4f0;
+    --header-color: #76669b;
+    --header-text: #f8f7fb;
+    --text-primary: #050505;
+    --text-secondary: #3d3d3d;
+    --grid-item: #9e92c0;
+    --form-color: #b9b2d3;
+
+    --btn-a-hover: #362e47;
+    --btn-active: #b9b2d3;
+}
+
 body {
     line-height: 1.6;
-    background-color: #e5e4f0;
+    background-color: var(--bg-color);
 }
 
 .header {
     font-family: "Poppins", sans-serif;
-    background-color: #76669b;
-    color: #f8f7fb;
+    background-color: var(--header-color);
+    color: var(--header-text);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -51,12 +64,17 @@ body {
 }
 
 .nav-links a {
-    color: #f8f7fb;
+    color: var(--header-text);
     text-decoration: none;
     font-weight: 400;
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
+}
+
+a:hover {
+    color: var(--btn-a-hover);
+    transition: 250ms;
 }
 
 .container {
@@ -70,7 +88,7 @@ body {
     margin-block: 18px;
     
     & h2 {
-        color: #050505;
+        color: var(--text-primary);
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         font-size: 1.8rem;
@@ -78,7 +96,7 @@ body {
     }
 
     & p {
-        color: #3d3d3d;
+        color: var(--text-secondary);
         font-family: "Poppins", sans-serif;
         font-weight: 300;
         font-size: 1.1rem;
@@ -91,7 +109,7 @@ body {
     margin-block: 18px;
     
     & h2 {
-        color: #050505;
+        color: var(--text-primary);
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         font-size: 1.8rem;
@@ -108,9 +126,8 @@ body {
 
 .aventura-item {
     margin-block: 18px;
-    background-color: #9e92c0;
+    background-color: var(--grid-item);
     border-radius: 2%;
-    color: #f8f7fb;
 
     & img {
         width: 400px;
@@ -119,7 +136,7 @@ body {
     }
 
     & h3 {
-        color: #050505;
+        color: var(--text-primary);
         margin-top: 6px;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
@@ -129,7 +146,7 @@ body {
     }
 
     & p {
-        color: #3d3d3d;
+        color: var(--text-secondary);
         margin-top: 0px;
         font-family: "Poppins", sans-serif;
         font-weight: 300;
@@ -144,7 +161,7 @@ body {
     margin-block: 18px;
     
     & h2 {
-        color: #050505;
+        color: var(--text-primary);
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         font-size: 1.8rem;
@@ -152,7 +169,7 @@ body {
     }
 
     & p {
-        color: #3d3d3d;
+        color: var(--text-secondary);
         font-family: "Poppins", sans-serif;
         font-weight: 300;
         font-size: 1.1rem;
@@ -168,7 +185,7 @@ body {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-color: #b9b2d3;
+        background-color: var(--form-color);
         padding: 30px;
 
         & input {
@@ -177,8 +194,8 @@ body {
             margin-inline: auto;
             margin-bottom: 20px;
             font-family: "Poppins", sans-serif;
-            color: #3d3d3d;
-            border: solid 1px #3d3d3d;
+            color: var(--text-secondary);
+            border: solid 1px var(--text-secondary);
             text-indent: 5px;
         }
 
@@ -188,8 +205,8 @@ body {
             margin-inline: auto;
             margin-bottom: 20px;
             font-family: "Poppins", sans-serif;
-            color: #3d3d3d;
-            border: solid 1px #3d3d3d;
+            color: var(--text-secondary);
+            border: solid 1px var(--text-secondary);
             text-indent: 5px;
         }
 
@@ -199,19 +216,29 @@ body {
             margin-inline: auto;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
-            color: #050505;
-            border: solid 1px #050505;
+            color: var(--text-primary);
+            border: solid 1px var(--text-primary);
         }
     }
 }
 
+input[type="submit"]:hover {
+    background-color: var(--btn-a-hover);
+    color: var(--header-text);
+    transition: 250ms;
+}
+
+input[type="submit"]:active {
+    background-color: var(--btn-active);
+    color: var(--text-primary);
+}
 
 .footer {
     margin-top: 72px;
     margin-bottom: 36px;
     
     & p {
-        color: #3d3d3d;
+        color: var(--text-secondary);
         font-family: "Poppins", sans-serif;
         font-weight: 300;
         font-size: 0.8rem;
